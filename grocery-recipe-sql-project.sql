@@ -1,12 +1,12 @@
 CREATE TABLE "product" (
-  "id" integer PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" text,
   "brand" text,
   "food_type_id" integer
 );
 
 CREATE TABLE "ingredient" (
-  "id" integer PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" text,
   "amount" float,
   "unit" text,
@@ -15,7 +15,7 @@ CREATE TABLE "ingredient" (
 );
 
 CREATE TABLE "recipe" (
-  "id" integer PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" text,
   "prep_time" float,
   "cook_time" float,
@@ -23,7 +23,7 @@ CREATE TABLE "recipe" (
 );
 
 CREATE TABLE "package_type" (
-  "id" integer PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "unit_of_measurement" text,
   "quantity" integer,
   "product_id" integer,
@@ -31,7 +31,7 @@ CREATE TABLE "package_type" (
 );
 
 CREATE TABLE "food_type" (
-  "id" integer PRIMARY KEY,
+  "id" SERIAL PRIMARY KEY,
   "name" text
 );
 
